@@ -1,0 +1,241 @@
+.home {
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 400px);
+  min-height: 400px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.3;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: white;
+  color: #0d7377;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.quick-links {
+  padding: 60px 20px;
+  background: white;
+}
+
+.quick-links-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+.quick-link-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 15px;
+  background: #f8f9fa;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.quick-link-card:hover {
+  transform: translateY(-5px);
+}
+
+.quick-link-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);
+  box-shadow: 0 5px 15px rgba(13, 115, 119, 0.3);
+}
+
+.quick-link-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.quick-link-card h3 {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.how-it-works {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.steps-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.step-card {
+  text-align: center;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(13, 115, 119, 0.2);
+  border-color: #14ffec;
+}
+
+.step-card:hover .step-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);
+}
+
+.step-card:hover .step-icon svg {
+  color: white;
+}
+
+.step-card:hover .step-label {
+  background: linear-gradient(135deg, #0d7377 0%, #14ffec 100%);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f8f8;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #0d7377;
+  transition: color 0.3s ease;
+}
+
+.step-label {
+  display: inline-block;
+  background: #0d7377;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.step-card h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.step-card:hover h3 {
+  color: #0d7377;
+}
+
+.step-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1200px) {
+  .quick-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .quick-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .how-it-works h2 {
+    font-size: 1.8rem;
+  }
+}
