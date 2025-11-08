@@ -409,5 +409,157 @@ export const products = [
     price: 4995,
     description: "High-performance gaming mouse",
     features: ["25K DPI", "11 buttons", "RGB lighting"]
+  },
+
+  // Budget Phones (under 20000)
+  {
+    id: 49,
+    name: "Redmi Note 12",
+    category: "Phone",
+    price: 15999,
+    description: "Budget smartphone with great features",
+    features: ["5G", "128GB", "48MP camera"]
+  },
+  {
+    id: 50,
+    name: "Samsung Galaxy M14",
+    category: "Phone",
+    price: 13990,
+    description: "Affordable Samsung with long battery life",
+    features: ["5G", "128GB", "6000mAh battery"]
+  },
+  {
+    id: 51,
+    name: "Poco X5",
+    category: "Phone",
+    price: 18999,
+    description: "Performance-focused budget phone",
+    features: ["5G", "128GB", "Snapdragon 695"]
+  },
+
+  // Budget Phones (under 50000)
+  {
+    id: 52,
+    name: "Google Pixel 7a",
+    category: "Phone",
+    price: 43999,
+    description: "Premium mid-range with excellent camera",
+    features: ["5G", "128GB", "Google Tensor G2"]
+  },
+  {
+    id: 53,
+    name: "iPhone 13",
+    category: "Phone",
+    price: 49900,
+    description: "Previous gen iPhone at great price",
+    features: ["5G", "128GB", "A15 Bionic"]
+  },
+
+  // Budget Headphones (under 20000)
+  {
+    id: 54,
+    name: "OnePlus Buds Pro 2",
+    category: "Headphones",
+    price: 11999,
+    description: "Premium TWS with spatial audio",
+    features: ["ANC", "39hr battery", "LHDC codec"]
+  },
+  {
+    id: 55,
+    name: "Sennheiser HD 450BT",
+    category: "Headphones",
+    price: 9990,
+    description: "Quality over-ear headphones",
+    features: ["ANC", "30hr battery", "Foldable"]
+  },
+
+  // Budget Tablets (under 20000)
+  {
+    id: 56,
+    name: "Samsung Galaxy Tab A8",
+    category: "Tablet",
+    price: 17999,
+    description: "Budget tablet for entertainment",
+    features: ["10.5-inch", "64GB", "Quad speakers"]
+  },
+  {
+    id: 57,
+    name: "Lenovo Tab M10",
+    category: "Tablet",
+    price: 12999,
+    description: "Affordable tablet for basic use",
+    features: ["10.1-inch", "64GB", "5000mAh battery"]
+  },
+
+  // Budget Tablets (under 50000)
+  {
+    id: 58,
+    name: "iPad 10th Gen",
+    category: "Tablet",
+    price: 44900,
+    description: "Latest budget iPad with modern design",
+    features: ["A14 Bionic", "10.9-inch", "64GB"]
+  },
+  {
+    id: 59,
+    name: "Samsung Galaxy Tab S8",
+    category: "Tablet",
+    price: 49999,
+    description: "Premium Android tablet",
+    features: ["11-inch", "128GB", "S Pen included"]
+  },
+
+  // Budget Gaming Laptops (under 50000)
+  {
+    id: 60,
+    name: "Asus TUF F15",
+    category: "Gaming Laptop",
+    price: 49990,
+    description: "Entry-level gaming laptop",
+    features: ["Intel i5", "8GB RAM", "GTX 1650"]
+  },
+  {
+    id: 61,
+    name: "Acer Nitro 5",
+    category: "Gaming Laptop",
+    price: 47990,
+    description: "Budget gaming with good cooling",
+    features: ["AMD Ryzen 5", "8GB RAM", "GTX 1650"]
+  },
+
+  // Budget Vacuum Cleaners (under 20000)
+  {
+    id: 62,
+    name: "Eureka Forbes Vogue",
+    category: "Home Appliance",
+    price: 8999,
+    description: "Compact vacuum cleaner for home",
+    features: ["1000W", "Bagless", "HEPA filter"]
+  },
+  {
+    id: 63,
+    name: "Philips PowerPro",
+    category: "Home Appliance",
+    price: 12990,
+    description: "Powerful vacuum with cyclonic action",
+    features: ["1800W", "Bagless", "2L capacity"]
+  },
+
+  // Budget Vacuum Cleaners (under 50000)
+  {
+    id: 64,
+    name: "iRobot Roomba 694",
+    category: "Home Appliance",
+    price: 29990,
+    description: "Robot vacuum with smart features",
+    features: ["WiFi", "Auto-charging", "App control"]
+  },
+  {
+    id: 65,
+    name: "Dyson V8",
+    category: "Home Appliance",
+    price: 39900,
+    description: "Cordless stick vacuum",
+    features: ["40min runtime", "Lightweight", "HEPA filter"]
   }
 ];

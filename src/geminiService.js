@@ -78,6 +78,10 @@ function smartFilter(query, products) {
         categoryMatches = productCategory.includes('gaming') && productCategory.includes('laptop');
       } else if (matchedCategory === 'gaming') {
         categoryMatches = productCategory.includes('gaming') || productCategory.includes('console');
+      } else if (matchedCategory === 'phone') {
+        categoryMatches = productCategory.includes('phone') && !productCategory.includes('headphone');
+      } else if (matchedCategory === 'headphones') {
+        categoryMatches = productCategory.includes('headphone');
       } else {
         categoryMatches = productCategory.includes(matchedCategory);
       }
