@@ -1,83 +1,180 @@
-# AI Product Recommendation System
+# 🛍️ AI Product Search & Recommendation System
 
-A React-based product recommendation system powered by Google Gemini API.
+An intelligent product search application powered by smart filtering algorithms with Google Gemini API integration. Search for products using natural language and get instant, accurate recommendations.
 
-## Features
+## ✨ Features
 
-- 🤖 AI-powered product recommendations using Google Gemini
-- 📱 Display of 12 sample products across multiple categories
-- 🔍 Natural language query support (e.g., "I want a phone under $500")
-- 🎨 Clean, responsive UI with gradient design
-- ⚡ Built with React + Vite for fast development
+- 🔍 **Smart Search** - Natural language product search with intelligent filtering
+- 🎯 **Category Detection** - Automatically detects product categories (phones, laptops, tablets, etc.)
+- 💰 **Price Filtering** - Search with price constraints (e.g., "under ₹50000")
+- 🏷️ **Brand Recognition** - Filter by specific brands (Samsung, Apple, Xiaomi, etc.)
+- 📱 **48 Products** - Diverse catalog across 15+ categories
+- 🎨 **Modern UI** - Clean, responsive design with smooth animations
+- ⚡ **Fast Performance** - Built with React + Vite
+- 🤖 **AI Fallback** - Google Gemini API integration (optional)
 
-## Setup Instructions
+## 🚀 Quick Start
 
-### 1. Install Dependencies
+### Prerequisites
 
+- Node.js 16+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Lishadsza/ProductRecomendationAi.git
+cd ProductRecomendationAi
+```
+
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-### 2. Get Gemini API Key
+3. **Set up environment variables**
+```bash
+# Copy the example env file
+cp .env.example .env
 
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click "Create API Key"
-4. Copy your API key
-
-### 3. Configure Environment
-
-Open the `.env` file and replace `your_gemini_api_key_here` with your actual API key:
-
-```
-VITE_GEMINI_API_KEY=your_actual_api_key_here
+# Edit .env and add your Gemini API key (optional)
+VITE_GEMINI_API_KEY=your_api_key_here
 ```
 
-### 4. Run the Application
-
+4. **Run the development server**
 ```bash
 npm run dev
 ```
 
-The app will open at `http://localhost:5173`
+5. **Open your browser**
+```
+http://localhost:5173
+```
 
-## Usage
+## 🎯 Usage Examples
 
-1. View all 12 products displayed on the page
-2. Enter a natural language query like:
-   - "I want a phone under $500"
-   - "Show me budget laptops"
-   - "I need wireless headphones under $100"
-   - "Recommend a tablet for work"
-3. Click "Get Recommendations"
-4. The AI will filter and show matching products
-5. Click "Show All Products" to reset
+Try these search queries:
 
-## Project Structure
+**Category Searches:**
+- `gaming laptop` - Shows gaming laptops
+- `smartphone` or `phone` - Shows phones
+- `tablet` or `tabs` - Shows tablets
+- `smartwatch` - Shows smartwatches
+- `headphones` - Shows headphones
+- `fitness tracker` - Shows fitness bands
+
+**Price Filters:**
+- `gaming laptop under ₹80000` - Gaming laptops under 80k
+- `phone under ₹30000` - Budget phones
+- `laptop under ₹50000` - Affordable laptops
+
+**Brand Searches:**
+- `samsung phone` - Samsung phones only
+- `apple` - All Apple products
+- `xiaomi tablet` - Xiaomi tablets
+- `asus gaming laptop` - Asus gaming laptops
+
+**Combined Searches:**
+- `best gaming laptop` - Premium gaming laptops
+- `budget phone under ₹25000` - Cheap phones
+- `samsung smartwatch` - Samsung smartwatches
+
+## 📁 Project Structure
 
 ```
+ProductRecomendationAi/
 ├── src/
-│   ├── App.jsx              # Main component
-│   ├── App.css              # Styling
-│   ├── main.jsx             # Entry point
-│   ├── products.js          # Product data
-│   └── geminiService.js     # Gemini API integration
+│   ├── components/
+│   │   ├── Navbar.jsx           # Navigation bar
+│   │   └── Navbar.css
+│   ├── pages/
+│   │   ├── Home.jsx             # Landing page
+│   │   ├── Home.css
+│   │   ├── Products.jsx         # Product search page
+│   │   ├── Products.css
+│   │   ├── HelpCentre.jsx       # Help & FAQ
+│   │   └── HelpCentre.css
+│   ├── App.jsx                  # Main app component
+│   ├── App.css
+│   ├── main.jsx                 # Entry point
+│   ├── products.js              # Product database (48 products)
+│   └── geminiService.js         # Smart filter + Gemini API
+├── .env.example                 # Environment template
+├── .gitignore
 ├── index.html
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ```
 
-## How It Works
+## 🛠️ Technologies
 
-1. User enters a preference query
-2. App sends the query + product list to Gemini API
-3. Gemini analyzes the request and returns matching product IDs
-4. App filters and displays recommended products
-5. User can reset to see all products again
+- **Frontend:** React 18, React Router DOM
+- **Build Tool:** Vite 5
+- **Styling:** CSS3 with custom animations
+- **AI Integration:** Google Gemini API (optional)
+- **State Management:** React Hooks
 
-## Technologies
+## 🧠 How It Works
 
-- React 18
-- Vite
-- Google Gemini API
-- CSS3 with gradients and animations
+1. **User Input** - User enters a search query in natural language
+2. **Query Analysis** - System extracts:
+   - Category keywords (laptop, phone, tablet, etc.)
+   - Price constraints (under, below, within)
+   - Brand names (Samsung, Apple, etc.)
+   - Intent keywords (best, budget, premium)
+3. **Smart Filtering** - Products are filtered based on:
+   - Category match
+   - Price range
+   - Brand preference
+   - Intent-based sorting
+4. **Results Display** - Matching products shown with details
+5. **AI Fallback** - If Gemini API is configured, it provides additional intelligence
+
+## 🔑 Getting Gemini API Key (Optional)
+
+The app works without an API key using smart filtering. To enable Gemini AI:
+
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the key to your `.env` file
+
+## 📦 Product Categories
+
+- Phones (8 products)
+- Tablets (8 products)
+- Gaming Laptops (5 products)
+- Laptops (3 products)
+- Smartwatches (2 products)
+- Headphones (5 products)
+- Smart Home (4 products)
+- Fitness Trackers (2 products)
+- TVs (3 products)
+- Cameras (2 products)
+- Gaming Consoles (2 products)
+- Gaming Accessories (1 product)
+- Home Appliances (1 product)
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**Lishad**
+- GitHub: [@Lishadsza](https://github.com/Lishadsza)
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for AI capabilities
+- React team for the amazing framework
+- Vite for blazing fast development experience
