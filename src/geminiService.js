@@ -9,6 +9,7 @@ function smartFilter(query, products) {
   const maxPrice = priceMatch ? parseInt(priceMatch[1].replace(/,/g, '')) : null;
 
   let matchedCategory = null;
+  let includePhoneAndHeadphones = false;
 
   if (/gaming\s+(laptop|notebook)/i.test(lowerQuery) || /gaming\s*laptops/i.test(lowerQuery)) {
     matchedCategory = 'gaming laptop';
@@ -19,11 +20,14 @@ function smartFilter(query, products) {
   else if (/\b(fitness tracker|fitness band|smart band|fitbit|mi band)\b/i.test(lowerQuery)) {
     matchedCategory = 'fitness tracker';
   }
-  else if (/\b(smartphone|smartphones|phone|phones|mobile)\b/i.test(lowerQuery)) {
+  else if (/\b(headphone|headphones|earphone|earphones|airpod|airpods|earbud|earbuds|headset)\b/i.test(lowerQuery)) {
+    matchedCategory = 'headphones';
+  }
+  else if (/\b(smartphone|smartphones|mobile)\b/i.test(lowerQuery)) {
     matchedCategory = 'phone';
   }
-  else if (/\b(headphone|headphones|earphone|airpod|earbud|headset|earbuds)\b/i.test(lowerQuery)) {
-    matchedCategory = 'headphones';
+  else if (/\bphones?\b/i.test(lowerQuery)) {
+    includePhoneAndHeadphones = true;
   }
   else if (/\b(tablet|ipad|tablets|tabs|tab)\b/i.test(lowerQuery)) {
     matchedCategory = 'tablet';
@@ -62,7 +66,12 @@ function smartFilter(query, products) {
     const productCategory = product.category.toLowerCase();
     const productName = product.name.toLowerCase();
 
-    if (matchedCategory) {
+    if (includePhoneAndHeadphones) {
+      if (!productCategory.includes('phone') && !productCategory.includes('headphone')) {
+        return false;
+      }
+    }
+    else if (matchedCategory) {
       let categoryMatches = false;
 
       if (matchedCategory === 'gaming laptop') {
@@ -116,7 +125,16 @@ function smartFilter(query, products) {
     return true;
   });
 
-  if (bestIntent && filtered.length > 0) {
+  if (includePhoneAndHeadphones && filtered.length > 0) {
+    filtered.sort((a, b) => {
+      const aIsPhone = a.category.toLowerCase().includes('phone') && !a.category.toLowerCase().includes('headphone');
+      const bIsPhone = b.category.toLowerCase().includes('phone') && !b.category.toLowerCase().includes('headphone');
+      if (aIsPhone && !bIsPhone) return -1;
+      if (!aIsPhone && bIsPhone) return 1;
+      return b.price - a.price;
+    });
+  }
+  else if (bestIntent && filtered.length > 0) {
     filtered.sort((a, b) => b.price - a.price);
   }
   else if (budgetIntent && filtered.length > 0) {
