@@ -19,11 +19,11 @@ function smartFilter(query, products) {
   else if (/\b(fitness tracker|fitness band|smart band|fitbit|mi band)\b/i.test(lowerQuery)) {
     matchedCategory = 'fitness tracker';
   }
-  else if (/\b(headphone|earphone|airpod|earbud|headset|earbuds|headphones)\b/i.test(lowerQuery)) {
-    matchedCategory = 'headphones';
-  }
-  else if (/\b(smartphone|phone|mobile|smartphones|phones)\b/i.test(lowerQuery)) {
+  else if (/\b(smartphone|smartphones|phone|phones|mobile)\b/i.test(lowerQuery)) {
     matchedCategory = 'phone';
+  }
+  else if (/\b(headphone|headphones|earphone|airpod|earbud|headset|earbuds)\b/i.test(lowerQuery)) {
+    matchedCategory = 'headphones';
   }
   else if (/\b(tablet|ipad|tablets|tabs|tab)\b/i.test(lowerQuery)) {
     matchedCategory = 'tablet';

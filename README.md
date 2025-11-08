@@ -58,11 +58,11 @@ Try these search queries:
 
 **Category Searches:**
 - `gaming laptop` - Shows gaming laptops
-- `smartphone` or `phone` - Shows phones
-- `tablet` or `tabs` - Shows tablets
+- `smartphone`, `phone`, or `mobile` - Shows phones
+- `tablet`, `tabs`, or `tab` - Shows tablets
 - `smartwatch` - Shows smartwatches
-- `headphones` - Shows headphones
-- `fitness tracker` - Shows fitness bands
+- `headphones` or `earbuds` - Shows headphones
+- `fitness tracker` or `smart band` - Shows fitness bands
 
 **Price Filters:**
 - `gaming laptop under ₹80000` - Gaming laptops under 80k
