@@ -25,7 +25,7 @@ function smartFilter(query, products) {
   else if (/\b(headphone|headphones|earphone|earphones|airpod|airpods|earbud|earbuds|headset|head phone)\b/i.test(lowerQuery)) {
     matchedCategory = 'headphones';
   }
-  else if (/\b(smartphone|smartphones|mobile)\b/i.test(lowerQuery)) {
+  else if (/\b(smartphone|smartphones|smart phone|mobile)\b/i.test(lowerQuery)) {
     matchedCategory = 'phone';
   }
   else if (/\bphones?\b/i.test(lowerQuery)) {
