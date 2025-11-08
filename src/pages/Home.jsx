@@ -37,6 +37,7 @@ function Home() {
     }
   ];
 
+  // Navigate to Products page with pre-filled search query via router state
   const handleQuickLinkClick = (query) => {
     navigate('/products', { state: { searchQuery: query } });
   };

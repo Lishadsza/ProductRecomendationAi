@@ -17,6 +17,7 @@ function Navbar() {
         </Link>
         
         <div className="nav-links">
+          {/* Dynamically add 'active' class to current page link */}
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
             Home
           </Link>

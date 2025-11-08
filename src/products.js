@@ -1,3 +1,5 @@
+// Product catalog - 65 products across multiple categories
+// To add new products: maintain the same structure with id, name, category, price, description, features
 export const products = [
   // Phones (5)
   {

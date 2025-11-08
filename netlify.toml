@@ -1,3 +1,4 @@
+# Netlify config - redirects all routes to index.html for React Router client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"

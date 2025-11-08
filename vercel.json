@@ -1,4 +1,5 @@
 {
+  "_comment": "Vercel config - redirects all routes to index.html for React Router client-side routing",
   "rewrites": [
     {
       "source": "/(.*)",

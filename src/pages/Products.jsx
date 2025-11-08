@@ -30,6 +30,7 @@ function Products() {
     </svg>
   );
 
+  // Auto-execute search if query passed from Home page via router state
   useEffect(() => {
     if (location.state?.searchQuery) {
       const searchQuery = location.state.searchQuery;
